@@ -1,1 +1,15 @@
-<p>book-detail works!</p>
+<h3>Chi tiet sach</h3>
+<div *ngIf="book; else nothing">
+  <p>Ten sach:
+    {{book.title}}
+  </p>
+  <p>Tac gia:
+    {{book.author}}
+  </p>
+  <p>Mo ta:</p>
+  <textarea cols="60" rows="10">{{book.description}}</textarea>
+</div>
+
+<ng-template #nothing>
+  <p>Nothing to show</p>
+</ng-template>

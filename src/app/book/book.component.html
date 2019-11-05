@@ -9,9 +9,9 @@
   </tr>
   <tr *ngFor="let book of bookList; index as i">
     <td>{{i+1}}</td>
-    <td>{{book.title}}</td>
+    <td><a [routerLink]="['/detail',book.id]">{{book.title}}</a></td>
     <td>{{book.author}}</td>
-    <td><button [routerLink]="['/edit',book.id]">Edit</button>
-      <button [routerLink]="['/delete',book.id]">Delete</button></td>
+    <td><a [routerLink]="['/edit',book.id]">Edit</a>&nbsp;|
+      <a [routerLink]="['/delete',book.id]">Delete</a></td>
   </tr>
 </table>

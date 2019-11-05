@@ -1,1 +1,15 @@
-<p>book-delete works!</p>
+<h3>Xoa sach</h3>
+<div *ngIf="book; else nothing">
+  <p>Ten sach:
+    {{book.title}}
+  </p>
+  <p>Tac gia:
+    {{book.author}}
+  </p>
+  <p>Mo ta:</p>
+  <textarea cols="60" rows="10">{{book.description}}</textarea>
+</div>
+<button (click)="deleteBook(book.id)">Delete</button>
+<ng-template #nothing>
+  <p>Nothing to show</p>
+</ng-template>
